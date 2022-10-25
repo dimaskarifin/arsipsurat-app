@@ -43,7 +43,7 @@ class ArsipController extends Controller
             'nomor_surat' => ['required'],
             'kategori' => ['required'],
             'judul_surat' => ['required'],
-            'document' => ['required'],
+            'document' => ['required','file', 'mimes:pdf'],
         ];
         $messages = [];
         $attributes = [
