@@ -18,7 +18,7 @@
                         <label for="" class="col-sm-2 col-form-label">Nomor Surat</label>
                         <div class="col-sm-3">
                             <input type="text" class="form-control @error('nomor_surat') is-invalid @enderror"
-                                name="nomor_surat" id="nomor_surat" placeholder="Nomor Surat" required
+                                name="nomor_surat" id="nomor_surat" placeholder="Nomor Surat"
                                 value="{{ old('nomor_surat') }}">
                             @error('nomor_surat')
                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
@@ -29,7 +29,7 @@
                         <label for="" class="col-sm-2 col-form-label">Kategori Surat</label>
                         <div class="col-sm-4">
                             <select class="form-select @error('kategori') is-invalid @enderror" aria-label="kategori"
-                                name="kategori" required>
+                                name="kategori">
                                 <option selected value="" {{ old('kategori') == '' ? 'selected' : '' }}>Pilih Kategori
                                     Surat
                                 </option>
@@ -52,7 +52,7 @@
                             Surat</label>
                         <div class="col-sm-8">
                             <input type="text" class="form-control @error('judul_surat') is-invalid @enderror"
-                                name="judul_surat" id="judul_surat" placeholder="Judul Surat" required
+                                name="judul_surat" id="judul_surat" placeholder="Judul Surat"
                                 value="{{ old('judul_surat') }}">
                             @error('judul_surat')
                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
@@ -63,7 +63,7 @@
                         <label for="" class="col-sm-2 col-form-label">Upload File</label>
                         <div class="col-sm-8">
                             <input type="file" class="form-control @error('document') is-invalid @enderror"
-                                name="document" id="document" value="{{ old('document') }}" required accept=".pdf">
+                                name="document" id="document" value="{{ old('document') }}" accept=".pdf">
                             @error('document')
                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror

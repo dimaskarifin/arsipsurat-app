@@ -74,7 +74,7 @@ class ArsipController extends Controller
         }
 
         Alert::success('Berhasil Menambahkan Data');
-        return redirect(route('arsipsurat.index'));
+        return redirect()->route('arsipsurat.index');
     }
 
     /**
