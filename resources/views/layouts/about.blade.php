@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title', 'About')
-@section('heading', 'About Me')
+@section('heading', 'About')
 @section('page', 'About')
 @section('content')
     <section class="section">
@@ -21,7 +21,7 @@
                                 </h3>
                                 <h3>NAMA : Dimas Khulil Arifin </h3>
                                 <h3>NIM : 1931730051 </h3>
-                                <h3>TGL : 10 Oktober 2022</h3>
+                                <h3>TGL : 25 Oktober 2022</h3>
                             </div>
                         </div>
                     </div>

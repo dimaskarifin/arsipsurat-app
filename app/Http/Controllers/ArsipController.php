@@ -43,7 +43,7 @@ class ArsipController extends Controller
             'nomor_surat' => ['required'],
             'kategori' => ['required'],
             'judul_surat' => ['required'],
-            'document' => ['required','file', 'mimes:pdf'],
+            'document' => ['required','file','mimes:pdf'],
         ];
         $messages = [];
         $attributes = [
@@ -74,7 +74,7 @@ class ArsipController extends Controller
         }
 
         Alert::success('Berhasil Menambahkan Data');
-        return redirect()->route('arsipsurat.index');
+        return redirect(route('arsipsurat.index'));
     }
 
     /**
@@ -125,7 +125,7 @@ class ArsipController extends Controller
                 'nomor_surat' => ['required'],
                 'kategori' => ['required'],
                 'judul_surat' => ['required'],
-                'document' => ['required'],
+                'document' => ['required','file', 'mimes:pdf'],
             ];
         }else {
             $rules = [
@@ -150,6 +150,7 @@ class ArsipController extends Controller
             $data->nomor_surat = $request->nomor_surat;
             $data->kategori = $request->kategori;
             $data->judul_surat = $request->judul_surat;
+            
             if ($request->hasFile('document')) {
                 $file = $request->file('document');
                 $filename = str_replace('/','-', $request->nomor_surat).".".$file->getClientOriginalExtension();
@@ -178,6 +179,7 @@ class ArsipController extends Controller
     {
         ArsipModel::where('id',$id)->delete();
 
+        Alert::success('Berhasil Menghapus Data');
         return redirect()->route('arsipsurat.index');
     }
 }
