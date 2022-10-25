@@ -63,7 +63,7 @@
                         <label for="" class="col-sm-2 col-form-label">Upload File</label>
                         <div class="col-sm-8">
                             <input type="file" class="form-control @error('document') is-invalid @enderror"
-                                name="document" id="document" value="{{ old('document') }}" required>
+                                name="document" id="document" value="{{ old('document') }}" required accept=".pdf">
                             @error('document')
                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror
